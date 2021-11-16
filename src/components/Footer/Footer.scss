@@ -1,0 +1,19 @@
+footer {
+  background-color: blue;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  min-height: 50px;
+  display: table;
+}
+
+footer a {
+  color: skyblue;
+  font-size: 1.5rem;
+  text-decoration: none;
+  font-weight: bolder;
+  margin: auto;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+}
