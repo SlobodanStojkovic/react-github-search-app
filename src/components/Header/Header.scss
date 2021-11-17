@@ -9,7 +9,8 @@ body {
 header {
   font-family: "Quicksand", sans-serif;
   font-size: 62.5%;
-  font-size: 10px;
+  position: fixed;
+  top: 0;
 }
 
 /* Navbar section */
@@ -23,6 +24,10 @@ header {
   z-index: 2;
   background-color: blue;
   min-height: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 .nav div .logoName {
@@ -72,25 +77,4 @@ header {
 
 .nav div.main_list ul li a:hover {
   color: black;
-}
-
-/* Home section */
-
-.homeSec {
-  width: 100%;
-  height: 100vh;
-  background-image: url(https://images.unsplash.com/photo-1498550744921-75f79806b8a7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b0f6908fa5e81286213c7211276e6b3d&auto=format&fit=crop&w=1500&q=80);
-  background-position: center top;
-  background-size: cover;
-}
-
-.navTrigger {
-  display: none;
-}
-
-.nav {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
 }

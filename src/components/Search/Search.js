@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { useEffect } from "react";
 import { searchUsers } from "../../services/searchUsers";
+import PropTypes from "prop-types";
 import "./Search.scss";
 
 const Search = ({ setSearchResults }) => {
@@ -10,27 +10,24 @@ const Search = ({ setSearchResults }) => {
     if (event.key === "Enter") {
       searchUsers(searchQuery).then((result) => {
         setSearchResults(result);
-        console.log(result);
       });
     }
   };
 
-  useEffect(() => {
-    searchForUsers(searchQuery);
-    /*     const filterProfiles = profiles.filter((profile) => {
-      return profile.name.toLowerCase().includes(searchQuery);
-    });
-    setFilteredProfiles(filterProfiles); */
-  }, []);
+  Search.propTypes = {
+    searchQuery: PropTypes.oneOf([PropTypes.string, PropTypes.number]),
+  };
 
   return (
-    <input
-      className="searchInput"
-      type="text"
-      placeholder="Seach profiles..."
-      onChange={(event) => setSearchQuery(event.target.value.toLowerCase())}
-      onKeyPress={searchForUsers}
-    ></input>
+    <div className="inputDiv">
+      <input
+        className="searchInput"
+        type="text"
+        placeholder="Search profiles..."
+        onChange={(event) => setSearchQuery(event.target.value.toLowerCase())}
+        onKeyPress={searchForUsers}
+      ></input>
+    </div>
   );
 };
 

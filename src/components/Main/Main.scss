@@ -9,17 +9,16 @@
 }
 
 .singleUser {
-  width: 30%;
+  width: 20%;
   display: inline-block;
   border: 1px solid gray;
   border-radius: 5px;
   margin: 0.5rem;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.35);
+  background-color: gainsboro;
 }
 
 .singleUserAvatar {
   width: 50%;
-}
-
-.userName {
-  display: inline-block;
+  margin: 1rem;
 }
