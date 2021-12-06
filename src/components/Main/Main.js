@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useState } from "react/cjs/react.development";
+import { useState } from "react";
 import Search from "../Search/Search";
 import "./Main.scss";
 
@@ -15,7 +15,7 @@ export const Main = () => {
         <div className="noResultsFound">{warning}</div>
       ) : (
         <div className="users">
-          {searchResults.map((user) => {
+          {searchResults && searchResults.map((user) => {
             return (
               <Link to={`/${user.login}`} key={user.id}>
                 <div className="singleUser">
