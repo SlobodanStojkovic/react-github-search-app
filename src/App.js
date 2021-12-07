@@ -12,10 +12,10 @@ function App() {
     <div className="App">
       <Header />
         <Routes>
-          <Route path="/" element={<Main />} />
           <Route path="/home" element={<Main />} />
           <Route path="/:user" element={<SingleUser />} />
           <Route path="/:user/:id" element={<SingleRepo />} />
+          <Route path="/" element={<Main />} />
         </Routes>
       <Footer />
     </div>
