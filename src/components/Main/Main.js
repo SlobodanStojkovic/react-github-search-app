@@ -15,20 +15,21 @@ export const Main = () => {
         <div className="noResultsFound">{warning}</div>
       ) : (
         <div className="users">
-          {searchResults && searchResults.map((user) => {
-            return (
-              <Link to={`/${user.login}`} key={user.id}>
-                <div className="singleUser">
-                  <img
-                    className="singleUserAvatar"
-                    src={user.avatar_url}
-                    alt="avatar"
-                  ></img>
-                  <p className="userName">{user.login}</p>
-                </div>
-              </Link>
-            );
-          })}
+          {searchResults &&
+            searchResults.map((user) => {
+              return (
+                <Link to={`/${user.login}`} key={user.id}>
+                  <div className="singleUser">
+                    <img
+                      className="singleUserAvatar"
+                      src={user.avatar_url}
+                      alt="avatar"
+                    ></img>
+                    <p className="userName">{user.login}</p>
+                  </div>
+                </Link>
+              );
+            })}
         </div>
       )}
     </>
