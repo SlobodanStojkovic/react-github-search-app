@@ -44,7 +44,7 @@ header {
 }
 
 .nav div.logoName a:hover {
-  color: black;
+  color: red;
 }
 
 .nav div.main_list {
@@ -71,10 +71,10 @@ header {
 .nav div.main_list ul li a {
   text-decoration: none;
   color: skyblue;
-  line-height: 65px;
+  line-height: 2rem;
   font-size: 2rem;
 }
 
 .nav div.main_list ul li a:hover {
-  color: black;
+  color: red;
 }
